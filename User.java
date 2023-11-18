@@ -172,7 +172,7 @@ public class User extends Comment {
             followers.remove(i);
             System.out.println("{FRIEND REMOVED!}");
         }else {
-            System.out.println("{YOU DON T HAVE A FRIEND WITH THIS NAME}");
+            System.out.println("{YOU DON T HAVE A FRIEND WITH}");
         }
     }
 
