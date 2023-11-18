@@ -1,5 +1,4 @@
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class User extends Comment {
 
@@ -91,6 +90,8 @@ public class User extends Comment {
         return followers;
     }
 
+    //post
+
     public void showYourPosts(){
         for(int i = 0; i <posts.size(); i++) {
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -130,7 +131,7 @@ public class User extends Comment {
     }
 
     public void removePost(Integer idPost) {
-        for(int i = 0; i <posts.size(); i++) {
+        for(int i = 0; i <posts.siz(); i++) {
             if (posts.get(i).getIdPost() == idPost) {
                 posts.remove(i);
             }
@@ -138,6 +139,41 @@ public class User extends Comment {
         System.out.println();
         System.out.println("{POST DELETED}");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")~;
+    }
+
+    //amigos
+
+    public void showFollowers(){
+        for(int i = 0; i <followers.size(); i++) {
+            System.out.println();
+            System.out.println("#" + followers.get(i).getName() + ", Birthday" + followers.get(i).getBirthdate() + " , Relationship status " + followers.get(i).getRelationship());
+
+        }
+    }
+
+    public void showFriends(){
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("                                              {FRIENDS}");
+        for(int i = 0; i < followers.size(); i++){
+            System.out.println(followers.get(i).getName() + "/");
+        }
+        System.out.println();
+
+    }
+
+    public void follow(String name, String birthdate, String relationship){
+        followers.add(new Follow(name, birthdate, relationship));
+        System.out.println("{FRIEND ADDED!}");
+    }
+
+    public void unfollow(String nameFollower){
+        for(int i = 0; i < followers.size(); i++);
+        if (followers.get(i).getName().contentEquals(nameFollower)){
+            followers.remove(i);
+            System.out.println("{FRIEND REMOVED!}");
+        }else {
+            System.out.println("{YOU DON T HAVE A FRIEND WITH THIS NAME}");
+        }
     }
 
 
