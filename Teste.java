@@ -1,9 +1,10 @@
-import java.util.ArrayList;
+/*import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-
-
 public class Main {
+
+    private static char wannaComment;
 
     public static void main (String[] args){
 
@@ -18,13 +19,13 @@ public class Main {
             System.out.println("SOCIAL TUNE");
             System.out.println("                 {SOCIAL TUNE(/) - CONECTING DEV'S}");
             System.out.println();
-            do {
+            do{
                 System.out.println("{1} NEW ACCOUNT ~ {2} LOGIN");
                 System.out.println(":$~");
                 choose = sc.nextInt();
                 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                switch (choose) {
-                    case 1:
+                switch ( choose) {
+                case 1:
                     sc.nextLine();
                     System.out.print("E-MAIL:~$ ");
                     String email = sc.nextLine();
@@ -39,7 +40,7 @@ public class Main {
                     System.out.println();
                     users.add(new User(email, password, name, birthdate, relationship));
                     break;
-                    case 2:
+                case 2:
                     sc.nextLine();
                     do{
                         System.out.print("E-MAIL:~$ ");
@@ -54,14 +55,12 @@ public class Main {
                             }
 
                         }
-                } while (loggedUser < 0);
-        }
+                    } while (loggedUser < 0);
+                }
+            } while (loggedUser < 0);
 
-    } while (loggedUser < 0);
-
-    do{
-
-        System.out.println();
+            do{
+                System.out.println();
                 System.out.println("SOCIAL TUNE");
                 System.out.println("                 {SOCIAL TUNE(/) - CONECTING DEV'S}");
                 System.out.println();
@@ -97,6 +96,7 @@ public class Main {
                         System.out.println();
                         users.get(loggedUser).setEmail(newEmail);
                         break;
+
                     case 2:
                         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                         System.out.print("{CURRENT PASSWORD} " + users.get(loggedUser).getPassword());
@@ -140,6 +140,7 @@ public class Main {
                     case 6:
                         break;
                     }
+
                 }
                 if (choose == 2) {
                     System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -233,6 +234,7 @@ public class Main {
                                     for(i = 0; i < users.size(); i++) {
                                         for(int j = 0; j < users.get(i).getPosts().size(); j++ ) {
                                             if (users.get(i).getPosts().get(j).getIdPost() == idPostComment) {
+                                                Object idComment;
                                                 users.get(i).getPosts().get(j).addComment (idComment, users.get(loggedUser), textComment);
                                             }
                                         }
@@ -292,3 +294,4 @@ public class Main {
 }
 
 }
+*/
